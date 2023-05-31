@@ -6,6 +6,7 @@
     @include media(576) {
         height: 75vh;
     }
+
     &-item {
         height: 100%;
 
@@ -33,6 +34,7 @@
             font-size: 80px;
             font-weight: 700;
             line-height: 94px;
+            text-align: center;
 
             @include media(850) {
                 font-size: 30px;
@@ -46,12 +48,17 @@
         }
 
         &-text {
-            color: #FFFFFF;
+            color: #fff;
             font-size: 20px;
             font-weight: 400;
             line-height: 30px;
             max-width: 960px;
             width: 100%;
+            text-align: center;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
 
             @include media(576) {
                 font-size: 16px;
@@ -69,6 +76,7 @@
         @include media(576) {
             gap: 30px;
         }
+
     }
 
     &-next {
@@ -93,7 +101,7 @@
             width: 50%;
             height: 100%;
             object-fit: cover;
-            border-radius: 0 10px 0 0;
+            border-radius: 0 10px 10px 0;
         }
 
         &-content {
@@ -101,11 +109,11 @@
             height: 100%;
             position: relative;
             background: linear-gradient(90deg, #000000 55.64%, rgba(0, 0, 0, 0) 100%);
-            color: #FFFFFF;
+            color: white;
             display: flex;
             flex-direction: column;
             gap: 15px;
-            padding: 15px 15px;
+            padding: 15px;
             border-radius: 10px;
         }
 
@@ -113,7 +121,7 @@
             font-size: 18px;
             font-weight: 700;
             line-height: 21px;
-            color: #FFFFFF;
+            color: white;
         }
 
         &-line {
@@ -121,7 +129,7 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.5);
+            background: #FFFFFF80;
             height: 5px;
             border-radius: 0 0 10px 10px;
 
@@ -129,7 +137,7 @@
                 content: '';
                 display: block;
                 height: 5px;
-                background: #FFFFFF;
+                background: #fff;
                 animation: time 5000ms ease-in-out infinite;
             }
         }
